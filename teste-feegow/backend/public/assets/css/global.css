@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #38CB89;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ccc;
+}
+
+.professional-list {
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+    height: 60vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #00263b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header > h1 {
+    color: white;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr 40px;
+    grid-template-areas: 
+    "header"
+    "content"
+    "footer";
+}
+
+.content {
+    grid-area: content;
+    background-color: #fff;
+}
+.content > .consult {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 15px 0 0 0;
+    background-color: #4C9AD8;
+}
+.content p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+input.btn-form {
+    width: 200px;
+    height: 30px;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 32px;
+    font-size: .9rem;
+    background-color: #6AC36F;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .2s;
+    outline: none;
+    align-self: center;
+}
+input.btn-form:hover {
+    color: #4C9AD8;
+    text-decoration: none;
+    background-color: white;
+}
+
+.content > .content-items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #0274be;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer > span {
+    color: white;
+}
+
+.card-footer {
+    border-top: none;
+    background-color: inherit;
+}
